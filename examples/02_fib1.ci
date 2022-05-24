@@ -1,0 +1,19 @@
+program fib {
+    declare i, n;
+    declare a, b, tmp;
+
+    input(n);
+
+    i := 0; while (i < n) { i := i + 1;
+        switchcase
+            case(i=1) { a := 0; b := 0; }
+            case(i=2) { a := 0; b := 1; }
+            default {
+                tmp := a;
+                a := b;
+                b := b + tmp;
+            };
+    };
+
+    print(b);
+}.

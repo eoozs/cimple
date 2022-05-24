@@ -1,0 +1,10 @@
+program fib {
+    declare x;
+
+    function fibo(in x) {
+        return (fibo(in x-1) + fibo(in x-2));
+    }
+
+    input(x);
+    print(fibo(in x));
+}.
